@@ -21,18 +21,18 @@ sizePassword.innerHTML = this.value;
 
 function generatePassword() {
 
-     let pass = 'mia neme buniita';
+     let pass = '';
 
-//     if(checkInput.checked){
+    if(checkInput.checked){
 
-//         for (let i = 0, n = charsetWithEspecialChar.length; i < sliderElement.value; ++i) {
-//         pass += charsetWithEspecialChar.charAt(Math.floor(Math.random() * n));
-//         }
-//     }else{
-//         for (let i = 0, n = charset.length; i < sliderElement.value; ++i) {
-//         pass += charset.charAt(Math.floor(Math.random() * n));
-//         }
-//     }
+        for (let i = 0, n = charsetWithEspecialChar.length; i < sliderElement.value; ++i) {
+        pass += charsetWithEspecialChar.charAt(Math.floor(Math.random() * n));
+        }
+    }else{
+        for (let i = 0, n = charset.length; i < sliderElement.value; ++i) {
+        pass += charset.charAt(Math.floor(Math.random() * n));
+        }
+    }
 
     console.log(pass)
     containerPassword.classList.remove("hide");
